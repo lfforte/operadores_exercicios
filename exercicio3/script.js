@@ -17,20 +17,21 @@ let vendasAbr = 1874;
 let vendasMai = 7000;
 let vendasJun = 9450;
 
-const inss = 0.05;
-const salario = 2000;
+const inss = Number(0.05);
 
-let salarioFixo = (Number((salario)-(salario*inss)));
+let salarioFixo = Number(2000);
 let auxCreche = Number(2 * 45.5);
 
 console.log("Salário fixo + Aux. Creche: R$", (salarioFixo + auxCreche));
 console.log("Comissão em Janeiro: R$",(vendasJan*0.10));
 console.log("O valor descontato de INSS em Janeiro é: R$",(vendasJan*0.10)*0.05);
-console.log("Salario fixo é de R$",salarioFixo,", o aux. creche é de R$",auxCreche," e o INSS descontado foi R$",(salario*inss),"\n",
-    "a comissão em Janeiro foi de R$",(vendasJan * 0.10),"\n",
-    "a comissão em Fevereiro foi de R$",(vendasFev * 0.10),"\n",
-    "a comissão em Março foi de R$",(vendasMar * 0.10),"\n",
-    "a comissão em Abril foi de R$",(vendasAbr * 0.10),"\n",
-    "a comissão em Maio foi de R$",(vendasMai * 0.10),"\n",
-    "a comissão em Junho foi de R$",(vendasJun * 0.10),"\n",
+console.log("Salário fixo é de R$",salarioFixo,", o aux. creche é de R$",auxCreche," e o INSS a descontar é de 0.5%","\n",
+    "Salário Total Janeiro foi R$",((salarioFixo+auxCreche+(vendasJan * 0.10)-((salarioFixo+auxCreche+(vendasJan * 0.10))*inss))),", sendo R$",(vendasJan * 0.10),"de comissão","e desconto do inss foi de R$",((salarioFixo+auxCreche+(vendasJan * 0.10))*inss),"\n",
+    "Salário Total Fevereir foi R$",((salarioFixo+auxCreche+(vendasFev * 0.10)-((salarioFixo+auxCreche+(vendasFev * 0.10))*inss))),", sendo R$",(vendasFev * 0.10),"de comissão","e desconto do inss foi de R$",((salarioFixo+auxCreche+(vendasFev * 0.10))*inss),"\n",
+    "Salário Total Março foi R$",((salarioFixo+auxCreche+(vendasMar * 0.10)-((salarioFixo+auxCreche+(vendasMar * 0.10))*inss))),", sendo R$",(vendasMar * 0.10),"de comissão","e desconto do inss foi de R$",((salarioFixo+auxCreche+(vendasMar * 0.10))*inss),"\n",
+    "Salário Total Abril foi R$",((salarioFixo+auxCreche+(vendasAbr * 0.10)-((salarioFixo+auxCreche+(vendasAbr * 0.10))*inss))),", sendo R$",(vendasAbr * 0.10),"de comissão","e desconto do inss foi de R$",((salarioFixo+auxCreche+(vendasAbr * 0.10))*inss),"\n",
+    "Salário Total Maio foi R$",((salarioFixo+auxCreche+(vendasMai * 0.10)-((salarioFixo+auxCreche+(vendasMai * 0.10))*inss))),", sendo R$",(vendasMai * 0.10),"de comissão","e desconto do inss foi de R$",((salarioFixo+auxCreche+(vendasMai * 0.10))*inss),"\n",
+    "Salário Total Junho foi R$",((salarioFixo+auxCreche+(vendasJun * 0.10)-((salarioFixo+auxCreche+(vendasJun * 0.10))*inss))),", sendo R$",(vendasJun * 0.10),"de comissão","e desconto do inss foi de R$",((salarioFixo+auxCreche+(vendasJun * 0.10))*inss),"\n",
     );
+
+//console.log("Média salárial e R$",((salarioFixo+auxCreche*6));
